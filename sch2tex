@@ -1,0 +1,40 @@
+#!/bin/bash
+
+rm 1201.tex
+
+pallete=${1:-ocean}
+
+echo '
+%\documentclass[a4paper,10pt]{report}
+\documentclass[preview]{standalone}
+% Definitions
+\usepackage{pdflscape}
+%\usepackage[height=25cm]{geometry}
+%\usepackage[height=25cm]{geometry}
+%\usepackage[margin=1in]{geometry}
+\usepackage{timetable}
+
+\begin{document}
+	\thispagestyle{empty}
+	\begin{center}
+	\begin{landscape}
+		\printheading{Winter 2020}
+
+		% Define the layout of your time tables
+		\setslotsize{2.8cm}{0.25cm}
+		\setslotcount{5}{84}
+		\settopheight{5}
+		\settextframe{1.0mm}' >> 1201.tex
+
+python3 parse_schedule.py $pallete >> 1201.tex
+
+echo '
+\end{timetable}
+\end{landscape}
+\end{center}
+\end{document}' >> 1201.tex
+
+pdflatex 1201.tex
+
+open 1201.pdf
+cp 1201.pdf "$pallete.pdf"

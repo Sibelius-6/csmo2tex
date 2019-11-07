@@ -1,0 +1,117 @@
+%\documentclass[a4paper,10pt]{report}
+\documentclass[preview]{standalone}
+% Definitions
+\usepackage{pdflscape}
+%\usepackage[height=25cm]{geometry}
+%\usepackage[height=25cm]{geometry}
+%\usepackage[margin=1in]{geometry}
+\usepackage{timetable}
+
+\begin{document}
+	\thispagestyle{empty}
+	\begin{center}
+	\begin{landscape}
+		\printheading{Winter 2020}
+		
+		% Define the layout of your time tables
+		\setslotsize{2.8cm}{0.25cm}
+		\setslotcount{5}{84}
+		\settopheight{5}
+		\settextframe{1.0mm}
+		
+		%19
+		% Define event types
+		%type    r     g     b     t_r  t_g  t_b
+		\defineevent{1}{0.98} {0.15}{0.44} {1.0}{1.0}{1.0}
+		\defineevent{2}{0.4} {0} {1} {1.0}{1.0}{1.0}
+		\defineevent{3}{0.65}{0.89}{0.18}{0.45}{0.45}{0.45}
+		\defineevent{4}{0.77}{0.3}{0.3}{1.0}{1.0}{1.0}
+		\defineevent{5}{0.93}{0.89}{0.49}{0.45}{0.45}{0.45}
+		\defineevent{6}{0.47}{0.67}{1.0}{1.0}{1.0}{1.0}
+		\defineevent{7}{1.0}{0.65}{0.0}{1.0}{1.0}{1.0}
+		\defineevent{8}{0.8}{0.0}{0.20}{1.0}{1.0}{1.0}
+		\defineevent{9}{0.9}{0.5}{0.1}{1.0}{1.0}{1.0}
+		\defineevent{10}{0.6}{0.7}{0.20}{1.0}{1.0}{1.0}
+		\defineevent{11}{0.1}{0.5}{0.30}{1.0}{1.0}{1.0}
+		\defineevent{12}{0.9}{0.33}{0.6}{1.0}{1.0}{1.0}
+		\defineevent{13}{0.1}{0.0}{0.20}{1.0}{1.0}{1.0}
+		\defineevent{14}{0.2}{0.68}{0.10}{1.0}{1.0}{1.0}
+		\defineevent{15}{0.8}{0.7}{0.6}{0.4}{0.4}{0.4}
+		\defineevent{16}{0.33}{0.56}{0.12}{1.0}{1.0}{1.0}
+		\defineevent{17}{0.66}{0.45}{0.32}{1.0}{1.0}{1.0}		
+		\defineevent{18}{0.1}{0.2}{0.69}{1.0}{1.0}{1.0}		
+		\defineevent{19}{0.7}{0.2}{0.8}{1.0}{1.0}{1.0}				
+		% Start the time table
+		\begin{timetable}
+			\hours{8}{10}{1}
+			
+			\englishdays{1}
+			
+			%      x start  end    name         lecturer          location              type
+\iffalse
+\event 1 {830}{920}{PHYS 334}{{\tiny Quant. Phys 2}}{RCH 103}{1}
+\event 3 {830}{920}{PHYS 334}{\tiny Quant. Phys 2}{RCH 103}{1}
+\event 5 {830}{920}{PHYS 334}{\tiny Quant. Phys 2}{RCH 103}{1}
+\fi
+
+\event 1 {830}{920}{PMATH 348}{{\tiny Fields and Galois}}{MC 2017}{1}
+\event 3 {830}{920}{PMATH 348}{\tiny Fields and Galois}{MC 2017}{1}
+\event 5 {830}{920}{PMATH 348}{\tiny Fields and Galois}{MC 2017}{1}
+
+\event 1 {1000}{1120}{CS 350}{\tiny OS}{MC 2038}{2}
+\event 3 {1000}{1120}{CS 350}{\tiny OS}{MC 2038}{2}
+              
+\event 1 {1130}{1250}{MUSIC 271}{\tiny Mus. Theory 2}{CGR 1208}{3}
+\event 3 {1130}{1220}{MUSIC 271}{\tiny Mus. Theory 2}{CGR 1208}{3}
+\event 3 {1230}{1320}{Noon Concert}{}{Chapel}{19}
+\event 5 {1130}{1250}{MUSIC 271}{\tiny Mus. Theory 2}{CGR 1208}{3}
+
+\event 1 {1330}{1420}{CO 331}{\tiny Coding Theory}{MC 4060}{4}
+\event 3 {1330}{1420}{CO 331}{\tiny Coding Theory}{MC 4060}{4}
+\event 5 {1330}{1420}{CO 331}{\tiny Coding Theory}{MC 4060}{4}
+
+\event 1 {1430}{1550}{CS 341}{Alg}{MC 2017}{5}
+\event 3 {1430}{1550}{CS 341}{Alg}{MC 2017}{5}
+\event 5 {930}{1020}{CS 341}{Alg TUT}{MC 2034}{5}
+
+\event 1 {1600}{1720}{PHYS 233}{\tiny Quant. Mech.}{MC 1056}{6}
+\event 3 {1600}{1720}{PHYS 223}{\tiny Quant. Mech.}{MC 1056}{6}
+
+% night
+\event 1 {1830}{2120}{PSYCH 253}{\tiny Social Psych.}{DC 1350}{7}
+
+\event 2 {1830}{2120}{SMF 211}{\tiny Dynamics of Dating}{SJ2 1002}{8}
+
+\event 3 {1730}{2020}{MSCI 442}{\tiny Impact of InfoSys on Org \& Soc}{DC 1350}{9}
+
+\event 4 {1830}{2120}{PSYCH 357}{\tiny Psych. of Good}{SJ2 1002}{10}
+
+% end night
+
+\event 2 {830}{950}{AMATH 475}{\tiny Gen. Rel.}{MC 4021}{18}
+\event 2 {1730}{1820}{AMATH 475}{\tiny Gen. Rel. TUT}{MC 4021}{18}
+\event 4 {830}{950}{AMATH 475}{\tiny Gen. Rel.}{MC 4021}{18}
+
+\event 2 {1000}{1120}{MUSIC 110}{\tiny Mus. Context}{CGR 1208}{12}
+\event 4 {1000}{1120}{MUSIC 110}{\tiny Mus. Context}{CGR 1208}{12}
+
+\event 2 {1130}{1250}{CO 255}{\tiny Intro Opt}{MC 4063}{13}
+\event 4 {1130}{1250}{CO 255}{\tiny Intro Opt}{MC 4063}{13}
+
+\event 2 {1300}{1420}{PHIL 251}{\tiny Metaphysics and Epistemology}{HH 150}{14}
+\event 4 {1300}{1420}{PHIL 251}{\tiny Metaphysics and Epistemology}{HH 150}{14}
+
+\event 2 {1430}{1550}{MUSIC 256}{\tiny Mus. 1900}{CGR 1208}{15}
+\event 4 {1430}{1550}{MUSIC 256}{\tiny Mus. 1900}{CGR 1208}{15}
+
+\event 2 {1600}{1720}{SYDE 522}{\tiny Machine Intell.}{STC 0040}{16}
+\event 4 {1600}{1720}{SYDE 522}{\tiny Machine Intell.}{STC 0040}{16}
+\event 4 {1730}{1820}{SYDE 522}{\tiny Machine Intell. TUT}{STC 0040}{16}
+
+\event 5 {1430}{1720}{MTE 544}{\tiny Autonomous Mobile Robots}{DWE 3522}{17}
+
+\event 5 {1030}{1120}{CHEM 120}{\tiny Phys. \& Chem. Prop. of Matter TUT}{DC 1351}{11}
+		\end{timetable}	
+	\end{landscape}
+\end{center}
+\end{document}
