@@ -36,5 +36,4 @@ echo '
 
 pdflatex 1201.tex
 
-open 1201.pdf
 cp 1201.pdf "$pallete.pdf"
